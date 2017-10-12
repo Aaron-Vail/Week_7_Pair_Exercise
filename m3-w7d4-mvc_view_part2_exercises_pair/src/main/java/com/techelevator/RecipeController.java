@@ -5,10 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -16,28 +14,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class RecipeController {
 
 	@RequestMapping({"/","/recipeTiles"})
-	public String displayRecipeTiles(HttpServletRequest request) {
-		request.setAttribute("recipes", getAllRecipes());
+	public String displayRecipeTiles(ModelMap modelHolder) {
+		modelHolder.put("recipes", getAllRecipes());
 		return "recipeTiles";
 	}
 	
 	@RequestMapping("/recipeTable")
-	public String displayRecipeTable(HttpServletRequest request) {
-		request.setAttribute("recipes", getAllRecipes());
+	public String displayRecipeTable(ModelMap modelHolder) {
+		modelHolder.put("recipes", getAllRecipes());
 		return "recipeTable";
 	}
 	
 	@RequestMapping("/recipeDetails")
-	public String displayRecipeDetails(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		try {
-			String recipeIdParam = request.getParameter("recipeId");
-			Long recipeId = Long.parseLong(recipeIdParam);
-			request.setAttribute("recipe", getRecipeById(recipeId));
-			return "recipeDetails";
-		} catch (NumberFormatException | IndexOutOfBoundsException e) {
-			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
-			return null;
-		}
+	public String displayRecipeDetails(@RequestParam Long recipeId, ModelMap modelHolder) throws IOException {
+		modelHolder.put("recipe", getRecipeById(recipeId));
+		return "recipeDetails";
 	}
 	
 	private Recipe getRecipeById(Long recipeId) {
