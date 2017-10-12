@@ -14,6 +14,11 @@ header {
 	color: white;
 	padding: 10px 10px;
 }
+h1 {
+	font-size: 14pt;
+	justify-content: center;
+	text-align: center;
+}
 
 nav {
 	background-color: #8DC63F;
@@ -48,11 +53,52 @@ nav li a:hover {
 section {
 	clear: both;
 	display: block;
-	width: 80%;
+	width: 90%;
 	margin: 20px auto;
 	vertical-align: top;
-	text-align: center;
 	min-height: 450px;
 	background-color: #FFF;
 	border-radius: 7px;
+}
+
+img.rating {
+	width: 100px;
+}
+
+img.recipeImage {
+	width: 200px;
+	length: 200px;
+	padding: 40px;
+	margin: 0px;
+}
+
+tr.greyed {
+	background-color: #dedce0;
+}
+
+tr.greyed > th {
+	background-color: white;
+}
+
+#recipeTable {
+	border-collapse: collapse;
+}
+
+img.photos {
+	
+	margin: 20px auto;
+	vertical-align: top;
+	min-height: 250px;
+	background-color: #FFF;
+	border-radius: 7px;
+}
+
+
+
+.block {
+	background-color: #B2E0B1;
+	display: inline-block;
+	margin: 30px 20px 15px 0px;	
+	width: 400px;
+	vertical-align: top;
 }

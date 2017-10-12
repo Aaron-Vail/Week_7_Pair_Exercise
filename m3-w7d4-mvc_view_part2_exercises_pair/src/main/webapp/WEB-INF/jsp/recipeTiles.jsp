@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 
@@ -19,10 +20,21 @@
         </ul>
         
     </nav>
-    <section id="main-content">
+    <section>
 
-       <!-- Use the request attribute "recipes" (List<Recipe>) -->
-
+			<h1>Recipes</h1>
+			<c:forEach items="${recipes}" var="recipe">
+			<div class="block">
+				<img src="img/recipe${recipe.recipeId}.jpg" class="photos"/>
+				<p class="recipe-name">"${recipe.name}"</p>
+				<p class="rating">
+				<fmt:formatNumber maxFractionDigits="0" value="${recipe.averageRating}" var="formattedRating"/>
+						<img src="img/${formattedRating}-star.png" class="rating"/>
+				</p>
+				<p class="ingredients">"${recipe.ingredients.size()}" ingredients</p>
+			</div>
+			</c:forEach>
+			
     </section>
 </body>
 </html>
