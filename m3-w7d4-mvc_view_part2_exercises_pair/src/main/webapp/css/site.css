@@ -15,8 +15,9 @@ header {
 	padding: 10px 10px;
 }
 h1 {
-	font-size: 14pt;
-	justify-content: center;
+	font-size: -10px;
+	margin-top: 8px;
+	padding-top: 10px;
 	text-align: center;
 }
 
@@ -60,45 +61,45 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
-
 img.rating {
+	display: inline-block;
 	width: 100px;
+	text-align: left;
+	margin-left: 10px;
 }
-
 img.recipeImage {
 	width: 200px;
 	length: 200px;
 	padding: 40px;
 	margin: 0px;
 }
-
 tr.greyed {
 	background-color: #dedce0;
 }
-
 tr.greyed > th {
 	background-color: white;
 }
-
 #recipeTable {
 	border-collapse: collapse;
+	width: 90%;
+   	margin-left: 5%;
 }
-
 img.photos {
-	
-	margin: 20px auto;
+	width: 100%;
 	vertical-align: top;
 	min-height: 250px;
 	background-color: #FFF;
 	border-radius: 7px;
 }
-
-
-
 .block {
 	background-color: #B2E0B1;
 	display: inline-block;
-	margin: 30px 20px 15px 0px;	
+	margin: 30px 20px 10px 5px;	
 	width: 400px;
 	vertical-align: top;
+}
+.ingredients {
+	text-align: left;
+	margin-left: 25px;
+	margin-right: 25px;
 }

@@ -26,12 +26,12 @@
 			<c:forEach items="${recipes}" var="recipe">
 			<div class="block">
 				<img src="img/recipe${recipe.recipeId}.jpg" class="photos"/>
-				<p class="recipe-name">"${recipe.name}"</p>
+				<p class="recipe-name">${recipe.name}</p>
 				<p class="rating">
 				<fmt:formatNumber maxFractionDigits="0" value="${recipe.averageRating}" var="formattedRating"/>
 						<img src="img/${formattedRating}-star.png" class="rating"/>
 				</p>
-				<p class="ingredients">"${recipe.ingredients.size()}" ingredients</p>
+				<p class="ingredients">${recipe.ingredients.size()} ingredients</p>
 			</div>
 			</c:forEach>
 			
