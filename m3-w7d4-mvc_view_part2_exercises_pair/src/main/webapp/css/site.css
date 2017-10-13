@@ -54,8 +54,8 @@ section {
 	clear: both;
 	display: block;
 	width: 90%;
-	margin: 20px auto;
-	vertical-align: top;
+ 	margin: 60px auto; 
+	vertical-align: top; 
 	min-height: 450px;
 	background-color: #FFF;
 	border-radius: 7px;
@@ -68,8 +68,8 @@ img.rating {
 img.recipeImage {
 	width: 200px;
 	length: 200px;
-	padding: 40px;
-	margin: 0px;
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
 tr.greyed {
@@ -85,7 +85,7 @@ tr.greyed > th {
 }
 
 img.photos {
-	
+	width: 100%;
 	margin: 20px auto;
 	vertical-align: top;
 	min-height: 250px;
@@ -102,3 +102,10 @@ img.photos {
 	width: 400px;
 	vertical-align: top;
 }
+
+#main-content {
+	margin: 2% 2% 2% 2%;
+}
+#container {
+	margin: 6% 2% 10% 10%;
+} 
