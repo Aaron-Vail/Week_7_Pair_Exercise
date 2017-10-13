@@ -61,11 +61,12 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
-img.rating {
+.rating {
 	display: inline-block;
 	width: 100px;
 	text-align: left;
 	margin-left: 10px;
+	margin-right: 180px;
 }
 img.recipeImage {
 	width: 200px;
@@ -109,8 +110,44 @@ img.photos {
 } 
 
 .ingredients {
-	text-align: left;
-	margin-left: 25px;
-	margin-right: 25px;
+	display: inline-block;
+	text-align: right;
+	margin-left: 10px;
 }
 
+.container {
+	display: flex;
+	padding: 1px;
+}
+
+.display-image {
+	flex: 1;
+	display: inline;
+	padding: 10px;
+	
+}
+.top-two {
+	flex: 3;
+	display: inline;
+}
+.display-name {
+	
+}
+.display-recipe {
+	
+}
+.display-time {
+	
+}
+.display-description {
+	
+}
+.display-header {
+	
+}
+.display-ingredients {
+	
+}
+.display-prep {
+	
+}
